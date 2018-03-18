@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GameCon Index</title>
+    <meta name="description" content="GameCon-Melee">
+
+    <!-- Viewport? -->
+
+    <!-- stylesheet? -->
+    <link href="css/flex-container.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- Shared JS -->
+    <script src="js/shared/angular.js"></script>
+    <script src="js/shared/angular-cookies.js"></script>
+    <script src="js/shared/angular-mock.js"></script>
+    <script src="js/shared/angular-route.js"></script>
+    <script src="js/shared/boot-min.js"></script>
+    <script src="js/shared/bootstrap.js"></script>
+    <script src="js/shared/includeHtml.js"></script>
+    
+    <!-- User JS -->
+    <script src="js/user/Application_Example.js"></script>
+    <script src="js/user/Controller_Example.js"></script>
+    <script src="js/user/Properties_Example.js"></script>
+    <script src="js/user/app.js" ></script>
+    <script src="js/user/header.js"></script>
+
+
+</head>
+
+<header ng-app="header" ng-controller="headerCtrl" >
+    <!-- NAVBAR -->
+    
+    <div ng-controller="headerCtrl">
+        <div ng-include="includeNavBar"> </div>
+    </div>
+    
+    <div class="wrap">
+		<!-- Title -->
+		<a href="#!"><img class="logo" src="assets/Title.png" /></a>
+     </div>
+</header>
+
+	<body>
+        <div ng-app="app" ng-controller="mainCtrl">
+            <div ng-include="melee">
+
+            </div>
+        </div>
+
+        <div class="flex-container">
+            <!-- TWITTER -->
+                <div class="twitter">
+                    <a class="twitter-timeline"  href="https://twitter.com/hashtag/Melee" data-widget-id="975093609518186496">#Melee Tweets</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </div>
+            <!-- TWITCH -->
+            <div class="twitchemb">
+                <div id="twitch"></div>
+                <script src="https://embed.twitch.tv/embed/v1.js"></script>
+                <script type="text/javascript">
+                    new Twitch.Embed("twitch", {
+                        width:1080,
+                        height:480,
+                        channel: "MeleeItOnMe"
+                    });
+                </script>
+
+            </div>
+        </div>
+          
+	</body>
+</html>
