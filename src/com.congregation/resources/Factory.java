@@ -16,6 +16,12 @@ public class Factory {
 		return new HouseBoatServiceImpl();
 	}
 
+	public static PasswordAuthentication createPasswordAuthentication(){
+		Logger logger = LogManager.getLogger(Factory.class);
+		logger.info("FactoryService: Inside PasswordAuthentication Method");
+		return new PasswordAuthentication();
+	}
+
 	public static HouseBoatDAOImpl createHouseBoatDAO() {
 		Logger logger = LogManager.getLogger(Factory.class);
 		logger.info("FactoryDAO: Inside HouseBoatDAOImpl Method");

@@ -13,7 +13,7 @@ public class AppConfig {
 	static {
 		try {
 			ClassLoader cl = Thread.currentThread().getContextClassLoader();
-			inputStream = cl.getResourceAsStream("com/infy/resources/configuration.properties");
+			inputStream = cl.getResourceAsStream("com/congregation/resources/configuration.properties");
 		}
 		catch (Exception e) {
 			Logger logger = LogManager.getLogger(AppConfig.class);

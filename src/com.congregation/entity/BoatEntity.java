@@ -9,6 +9,7 @@ import javax.persistence.Table;
 public class BoatEntity 
 {
 	@Id
+	@GeneratedValue
 	private String boatId;
 	private String boatingType ;
 	private String location;
